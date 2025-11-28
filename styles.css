@@ -1,0 +1,112 @@
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+/* Calculator container */
+.calc-box {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  width: 300px;              /* FIXED WIDTH para pantay */
+  box-sizing: border-box;    /* IMPORTANT */
+}
+
+/* Display input */
+#display {
+  width: 100%;
+  height: 60px;
+  font-size: 28px;
+  text-align: right;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #fff;
+  color: #000;
+  box-sizing: border-box;    /* PARA HINDI LUMAGPAS */
+}
+
+/* Buttons container */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;                 /* FIX spacing */
+}
+
+/* Buttons styling */
+.buttons input {
+  width: 100%;
+  height: 60px;
+  font-size: 22px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Hover effect */
+.buttons input:hover {
+  transform: scale(1.08);
+}
+
+/* Number buttons */
+.buttons input[value="0"],
+.buttons input[value="1"],
+.buttons input[value="2"],
+.buttons input[value="3"],
+.buttons input[value="4"],
+.buttons input[value="5"],
+.buttons input[value="6"],
+.buttons input[value="7"],
+.buttons input[value="8"],
+.buttons input[value="9"] {
+  background-color: #555;
+  color: #fff;
+}
+
+/* Operators */
+.buttons input[value="+"],
+.buttons input[value="-"],
+.buttons input[value="*"],
+.buttons input[value="/"],
+.buttons input[value="÷"],
+.buttons input[value="×"] {
+  background-color: #ff9800;
+  color: #fff;
+}
+/* Container holding calculator + names side-by-side */
+.container {
+  display: flex;
+  align-items: center;
+  gap: 40px;         /* Space between calculator and names */
+  justify-content: center;
+}
+
+/* Names styling */
+.names p {
+  font-size: 18px;
+  margin: 8px 0;
+  color: #333;
+  font-weight: 600;
+}
+
+
+/* Clear */
+.buttons input[value="C"] {
+  background-color: #f44336;
+  color: #fff;
+}
+
+/* Equal */
+.buttons input[value="="] {
+  background-color: #4CAF50;
+  color: #fff;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- CALCULATOR -->
+  <div class="calc-box">
+    <input type="text" id="display" readonly>
+
+    <div class="buttons">
+      <input onclick="insert('7')" type="button" value="7">
+      <input onclick="insert('8')" type="button" value="8">
+      <input onclick="insert('9')" type="button" value="9">
+      <input onclick="insert('/')" type="button" value="÷">
+
+      <input onclick="insert('4')" type="button" value="4">
+      <input onclick="insert('5')" type="button" value="5">
+      <input onclick="insert('6')" type="button" value="6">
+      <input onclick="insert('*')" type="button" value="×">
+
+      <input onclick="insert('1')" type="button" value="1">
+      <input onclick="insert('2')" type="button" value="2">
+      <input onclick="insert('3')" type="button" value="3">
+      <input onclick="insert('-')" type="button" value="−">
+
+      <input onclick="insert('0')" type="button" value="0">
+      <input onclick="clearDisplay()" type="button" value="C">
+      <input onclick="calculate()" type="button" value="=">
+      <input onclick="insert('+')" type="button" value="+">
+    </div>
+  </div>
+
+  <!-- NAMES BESIDE THE CALCULATOR -->
+  <div class="names">
+      <p>cholo tirambulo</p>
+      <p>pamulan franco</p>
+      <p>marben andaya</p>
+      <p>julie ann babor</p>
+  </div>
+
+</div>
+
+<script>
+  var view = document.getElementById('display');
+
+  function insert(num){
+    view.value += num;
+  }
+
+  function clearDisplay(){
+    view.value = '';
+  }
+
+  function calculate(){
+    try{
+      view.value = eval(view.value);
+    } catch {
+      view.value = "Error";
+    }
+  }
+</script>
+
+</body>
+</html>
+ 
