@@ -1,72 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Calculator</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <div class="container">
+    <h2>Registration Form</h2>
 
-  <!-- CALCULATOR -->
-  <div class="calc-box">
-    <input type="text" id="display" readonly>
+    <form id="regForm">
+        <label>Full Name</label>
+        <input type="text" id="fullname" placeholder="Enter full name">
 
-    <div class="buttons">
-      <input onclick="insert('7')" type="button" value="7">
-      <input onclick="insert('8')" type="button" value="8">
-      <input onclick="insert('9')" type="button" value="9">
-      <input onclick="insert('/')" type="button" value="÷">
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Enter email">
 
-      <input onclick="insert('4')" type="button" value="4">
-      <input onclick="insert('5')" type="button" value="5">
-      <input onclick="insert('6')" type="button" value="6">
-      <input onclick="insert('*')" type="button" value="×">
+        <label>Age</label>
+        <input type="number" id="age" placeholder="Enter age">
 
-      <input onclick="insert('1')" type="button" value="1">
-      <input onclick="insert('2')" type="button" value="2">
-      <input onclick="insert('3')" type="button" value="3">
-      <input onclick="insert('-')" type="button" value="−">
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Create password">
 
-      <input onclick="insert('0')" type="button" value="0">
-      <input onclick="clearDisplay()" type="button" value="C">
-      <input onclick="calculate()" type="button" value="=">
-      <input onclick="insert('+')" type="button" value="+">
-    </div>
-  </div>
-
-  <!-- NAMES BESIDE THE CALCULATOR -->
-  <div class="names">
-      <p>cholo tirambulo</p>
-      <p>pamulan franco</p>
-      <p>marben andaya</p>
-      <p>julie ann babor</p>
-  </div>
-
+        <button type="submit">Submit</button>
+    </form>
 </div>
 
-<script>
-  var view = document.getElementById('display');
-
-  function insert(num){
-    view.value += num;
-  }
-
-  function clearDisplay(){
-    view.value = '';
-  }
-
-  function calculate(){
-    try{
-      view.value = eval(view.value);
-    } catch {
-      view.value = "Error";
-    }
-  }
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
- 
+
